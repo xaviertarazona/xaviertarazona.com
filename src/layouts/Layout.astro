@@ -1,5 +1,6 @@
 ---
 import { Font } from "astro:assets";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -10,11 +11,10 @@ import { Font } from "astro:assets";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<Font cssVariable="--font-inter" preload />
-		<Font cssVariable="--font-playfair" preload />
+		<Font cssVariable="--font-gsf" preload />
 		<title>Xavier Tarazona</title>
 	</head>
-	<body>
+	<body class="antialiased">
 		<slot />
 	</body>
 </html>
