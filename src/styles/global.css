@@ -1,17 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-    --color-background: #0D0D0D;
-    --color-text: #ffffff;
+    --color-background: #151515;
+    --color-heading: #EEEEEE;
+    --color-text: #EAEAEA;
 }
 
 @theme inline {
-    --font-inter: var(--font-inter);
-    --font-playfair: var(--font-playfair)
+    --font-gsf: var(--font-gsf);
 }
 
 @layer base {
     body {
-        @apply bg-background text-text;
+        @apply bg-background text-text font-gsf;
+    }
+}
+
+@layer utilities {
+    .text-copy {
+        @apply text-lg leading-relaxed;
     }
 }
