@@ -1,0 +1,25 @@
+{
+    "name": "Xavier Tarazona",
+    "description": "I consider myself a software developer. I like building stuff and learning about everything. Well, I like burgers too, but that's not the point.",
+    "socialMedia": [
+        {
+            "name": "github",
+            "url": "https://github.com/xaviertarazona"
+        },
+        {
+            "name": "linkedin",
+            "url": "https://www.linkedin.com/in/xaviertarazona/"
+        },
+        {
+            "name": "youtube",
+            "url": "https://www.youtube.com/@xaviertarazona"
+        }
+    ],
+    "projects": [
+        {
+            "name": "ecosistemaencadena.com",
+            "description": "A platform that connects Mexican companies for commercial purposes. I built and designed the entire frontend with React and Tailwind CSS.",
+            "url": "https://www.ecosistemaencadena.com"
+        }
+    ]
+}
