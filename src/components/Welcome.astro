@@ -1,17 +1,24 @@
 ---
 import "../styles/global.css";
 import Arrow from "../assets/arrow.svg";
+import me from "../me.json";
 ---
 
 <main class="mx-auto px-6 py-10 md:w-2xl md:py-20">
-	<h1 class="text-2xl font-medium mb-4 text-heading">Xavier Tarazona</h1>
+	<h1 class="text-2xl font-medium mb-4 text-heading">{me.name}</h1>
 	<p class="text-copy">
-		I consider myself a software developer. I like building stuff and
-		learning about everything. Well, I like burgers too, but that's not the
-		point.
+		{me.description}
 	</p>
-	<div class="flex gap-2 text-lg underline underline-offset-2 justify-end mt-2">
-		<a href="">github</a><a href="">linkedin</a><a href="">youtube</a>
+	<div
+		class="flex gap-2 text-lg underline underline-offset-2 justify-end mt-2"
+	>
+		{
+			me.socialMedia.map((link) => (
+				<a href={link.url} target="_blank" class="text-copy">
+					{link.name}
+				</a>
+			))
+		}
 	</div>
 	<h2 class="text-xl mt-10 font-medium text-heading mb-4">
 		Projects I've worked on 👇
@@ -19,21 +26,21 @@ import Arrow from "../assets/arrow.svg";
 	<div
 		class="flex flex-col gap-4 hover:cursor-pointer hover:scale-102 transition-transform"
 	>
-		<a
-			href="https://www.ecosistemaencadena.com"
-			target="_blank"
-			class="border-2 rounded-2xl border-neutral-800 w-full p-3"
-		>
-			<div class="flex items-center justify-between">
-				<span class="font-medium text-copy">ecosistemaencadena.com</span
+		{
+			me.projects.map((project) => (
+				<a
+					href={project.url}
+					target="_blank"
+					class="border-2 rounded-2xl border-neutral-800 w-full p-3"
 				>
-				<Arrow class="w-5 h-5" />
-			</div>
-			<p class="text-copy mt-2">
-				A platform that connects Mexican companies for commercial
-				purposes. I built and designed the entire frontend with React
-				and Tailwind CSS.
-			</p>
-		</a>
+					<div class="flex items-center justify-between">
+						<span class="font-medium text-copy">{project.name}</span>
+						<Arrow class="w-5 h-5" />
+					</div>
+					<p class="text-copy mt-2">{project.description}</p>
+				</a>
+			))
+		}
 	</div>
-</main>
+</main>;
+
