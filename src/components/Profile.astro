@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Arrow from "../assets/arrow.svg";
+import Github from "../assets/github.svg";
 import me from "../me.json";
 ---
 
@@ -9,7 +10,9 @@ import me from "../me.json";
 	<p class="text-copy">
 		{me.description}
 	</p>
-	<ul class="flex gap-2 text-lg underline underline-offset-2 justify-end mt-2">
+	<ul
+		class="flex gap-2.5 text-lg underline underline-offset-2 justify-end mt-3"
+	>
 		{
 			me.socialMedia.map((link) => (
 				<li>
@@ -20,25 +23,36 @@ import me from "../me.json";
 			))
 		}
 	</ul>
-	<h2 class="text-xl mt-10 font-medium text-heading mb-4">
+	<h2 class="text-xl mt-8 font-medium text-heading mb-4">
 		Projects I've worked on 👇
 	</h2>
-	<div
-		class="flex flex-col gap-4 hover:cursor-pointer hover:scale-102 transition-transform"
-	>
+	<div class="flex flex-col gap-4">
 		{
 			me.projects.map((project) => (
-				<a
-					href={project.url}
-					target="_blank"
-					class="border-2 rounded-2xl border-neutral-800 w-full p-3"
-				>
+				<article class="border-2 rounded-2xl border-neutral-800 w-full p-3.5">
 					<div class="flex items-center justify-between">
-						<span class="font-medium text-copy">{project.name}</span>
-						<Arrow class="w-5 h-5" />
+						<span class="font-medium text-copy">
+							{project.name}
+						</span>
 					</div>
 					<p class="text-copy mt-2">{project.description}</p>
-				</a>
+					<div class="flex gap-3 justify-end mt-4">
+						<a
+							href={project.url}
+							target="_blank"
+							class="p-1.5 rounded-lg border border-neutral-700 hover:bg-neutral-800 transition-colors duration-200 flex items-center justify-center"
+						>
+							<Github class="w-5.5 h-5.5" />
+						</a>
+						<a
+							href={project.url}
+							target="_blank"
+							class="p-1.5 rounded-lg border border-neutral-700 hover:bg-neutral-800 transition-colors duration-200 flex items-center justify-center"
+						>
+							<Arrow class="w-5.5 h-5.5" />
+						</a>
+					</div>
+				</article>
 			))
 		}
 	</div>
