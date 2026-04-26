@@ -2,7 +2,7 @@
 
 @theme {
     --color-background: #151515;
-    --color-heading: #EEEEEE;
+    --color-header: #EEEEEE;
     --color-text: #EAEAEA;
 }
 
@@ -27,5 +27,9 @@
 @layer utilities {
     .text-copy {
         @apply text-lg leading-relaxed;
+    }
+
+    .header {
+        @apply text-xl mt-8 font-medium mb-4;
     }
 }
