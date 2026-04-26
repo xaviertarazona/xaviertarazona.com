@@ -1,6 +1,7 @@
 {
     "name": "Xavier Tarazona",
-    "description": "I consider myself a software developer. I like building stuff and learning about everything. Well, I like burgers too, but that's not the point.",
+    "description": "I'm a software developer. I like building stuff and learning about everything. Well, I like burgers too, but that's not the point.",
+    "email": "xavtarazona@gmail.com",
     "socialMedia": [
         {
             "name": "github",
@@ -19,7 +20,8 @@
         {
             "name": "ecosistemaencadena.com",
             "description": "A platform that connects Mexican companies for commercial purposes. I built and designed the entire frontend with React and Tailwind CSS.",
-            "url": "https://www.ecosistemaencadena.com"
+            "url": "https://www.ecosistemaencadena.com",
+            "github": null
         }
     ]
 }

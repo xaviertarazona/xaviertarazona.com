@@ -2,11 +2,12 @@
 import "../styles/global.css";
 import Arrow from "../assets/arrow.svg";
 import Github from "../assets/github.svg";
+import Email from "../assets/email.svg";
 import me from "../me.json";
 ---
 
 <main class="mx-auto px-6 py-10 md:w-2xl md:py-20">
-	<h1 class="text-2xl font-medium mb-4 text-heading">{me.name}</h1>
+	<h1 class="text-2xl font-medium mb-4 text-header">{me.name}</h1>
 	<p class="text-copy">
 		{me.description}
 	</p>
@@ -23,10 +24,10 @@ import me from "../me.json";
 			))
 		}
 	</ul>
-	<h2 class="text-xl mt-8 font-medium text-heading mb-4">
+	<h2 class="header text-header">
 		Projects I've worked on 👇
 	</h2>
-	<div class="flex flex-col gap-4">
+	<div class="flex flex-col gap-6">
 		{
 			me.projects.map((project) => (
 				<article class="border-2 rounded-2xl border-neutral-800 w-full p-3.5">
@@ -38,16 +39,21 @@ import me from "../me.json";
 					<p class="text-copy mt-2">{project.description}</p>
 					<div class="flex gap-3 justify-end mt-4">
 						<a
-							href={project.url}
+							href={project.github}
 							target="_blank"
-							class="p-1.5 rounded-lg border border-neutral-700 hover:bg-neutral-800 transition-colors duration-200 flex items-center justify-center"
+							class={
+								project.github
+									? "hover:bg-neutral-700 transition-colors duration-200"
+									: "bg-neutral-800 opacity-60" +
+										" p-1.5 rounded-lg border border-neutral-800 flex items-center justify-center"
+							}
 						>
 							<Github class="w-5.5 h-5.5" />
 						</a>
 						<a
 							href={project.url}
 							target="_blank"
-							class="p-1.5 rounded-lg border border-neutral-700 hover:bg-neutral-800 transition-colors duration-200 flex items-center justify-center"
+							class="p-1.5 rounded-lg border border-neutral-700 hover:bg-neutral-700 transition-colors duration-200 flex items-center justify-center"
 						>
 							<Arrow class="w-5.5 h-5.5" />
 						</a>
@@ -56,4 +62,14 @@ import me from "../me.json";
 			))
 		}
 	</div>
+	<h2 class="header text-header">
+		Want to work with me?
+	</h2>
+	<a
+		href={`mailto:${me.email}`}
+		class="inline-flex items-center gap-2 border border-neutral-700 px-4 py-2 rounded-lg hover:bg-neutral-700 transition-colors duration-200"
+	>
+		<span>Reach out</span>
+		<Email class="w-5 h-5" />
+	</a>
 </main>
