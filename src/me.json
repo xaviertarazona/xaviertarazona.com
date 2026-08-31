@@ -9,18 +9,18 @@
         },
         {
             "name": "linkedin",
-            "url": "https://www.linkedin.com/in/xaviertarazona/"
+            "url": "https://linkedin.com/in/xaviertarazona/"
         },
         {
             "name": "youtube",
-            "url": "https://www.youtube.com/@xaviertarazona"
+            "url": "https://youtube.com/@xaviertarazona"
         }
     ],
     "projects": [
         {
             "name": "ecosistemaencadena.com",
             "description": "A platform that connects Mexican companies for commercial purposes. I built and designed the entire frontend with React and Tailwind CSS.",
-            "url": "https://www.ecosistemaencadena.com",
+            "url": "https://ecosistemaencadena.com",
             "github": null
         }
     ]
